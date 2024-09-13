@@ -1,1 +1,7 @@
-summary gdocs = https://docs.google.com/document/d/1HfGKi9fGcAaCUT--NhYbYkKBsGElTlvLN7noFdC0pzk/edit?usp=sharing
+# **Introduction Front-End**
+
+1. Apa itu front-end? front-end adalah sebuah role didalam pembangunan website yang mana tugasnya adalah mengimplementasikan hasil desain dari UI/UX menjadi sebuah bentuk kode dan dapat diinteraksikan serta hasil dari pengembangan tersebut yang akan berinteraksi dengan user seperti mengeklik tombol, autentikasi login dan lainnya.
+
+2. Sebelum memulai menjadi front-end kita harus kenalan dulu sama internet, internet ini adalah sebuah jaringan internasional yang berskala global dimana kita sebagai user dapat berinteraksi dengan dunia luar yang terhubung dengan kabel Bawah laut serta satelit. Jika ingin mengakses sebuah aplikasi misalnya youtube yang ada di benua lain kita dapat mengkasesnya dengan menggunakan IP atau internet protocol yang berbentuk angka, namun seiring perkembangan zaman IP Address saat ini dapat diakses menggunakan huruf abjad yang mana lebih mudah diingat oleh manusia seperti www.google.com, www.youtube.com, dan lainnya. Dari IP Address itulah kita terhubung dan dapat saling mentransfer data antara user dengan server.
+
+3. Kemudian ada http/https yaitu sebuah protocol yang diguunakan untuk melakukan pengambilan data atau pengiriman data ke server yang mana biasanya Ketika mengakses sebuah website menggunakan IP Address biasanya akan mengambil tampilan website terlebih dahulu atau biasanya dinamakan HTTP GET, kemudian Ketika mengisi data formulir di dalam website lalu melakukan klik maka data tersebut akan terkirim ke server menggunakan HTTP dengan method POST.
