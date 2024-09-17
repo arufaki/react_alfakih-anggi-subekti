@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Create</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1>Create Product</h1>
+                <h2>Detail Product</h2>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <form action="">
+                    <div class="product-name test">
+                        <label for="name-input">Product Name :</label>
+                        <br />
+                        <input type="text" id="name-input" min="6" max="50" required />
+                    </div>
+                    <div class="product-category test">
+                        <label for="category-input">Product Category :</label>
+                        <br />
+                        <select name="product" id="product">
+                            <option value="bag">Bag</option>
+                            <option value="clothes">Clothes</option>
+                            <option value="jeans">Jeans</option>
+                        </select>
+                    </div>
+                    <div class="product-freshness test">
+                        <label for="product-freshness">Product Freshness :</label>
+                        <br />
+                        <input type="radio" id="new" value="Brand New" required />
+                        <label for="new">Brand New</label>
+                        <br />
+                        <input type="radio" id="hank" value="Second Hank" required />
+                        <label for="hank">Second Hank</label>
+                        <br />
+                        <input type="radio" id="refur" value="Refurbished" required />
+                        <label for="refur">Refurbish</label>
+                        <br />
+                    </div>
+                    <div class="product-image test">
+                        <label for="image">Image of Product</label>
+                        <input type="file" required />
+                    </div>
+                    <div class="product-description test">
+                        <label for="product-description">Additional Description</label>
+                        <br />
+                        <textarea name="desc-prod" id="desc-prod" required></textarea>
+                    </div>
+                    <div class="product-price test">
+                        <label for="price-prod">Product price :</label>
+                        <br />
+                        <input type="number" placeholder="$ 100" required />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
