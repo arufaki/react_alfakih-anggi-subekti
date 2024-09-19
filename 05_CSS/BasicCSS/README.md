@@ -1,4 +1,4 @@
-# CSS Best Practices
+# CSS
 
 Penggunaan CSS dalam sebuah website tidak hanya untuk mempercantik tampilan, tetapi juga untuk menerapkan desain UI/UX dengan akurasi sekitar 90-95% dari desain yang ditentukan. Sebagai seorang front-end developer, ada beberapa konsep kunci yang perlu dipahami dalam penggunaan CSS:
 
