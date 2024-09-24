@@ -36,7 +36,7 @@
                 </div>
             </section>
             <section class="flex flex-wrap items-center justify-center flex-col">
-                <form class="group w-[600px]" novalidate>
+                <form class="group w-[600px]">
                     <h2 class="font-roboto font-medium text-2xl mb-4 text-[#212529]">Detail Product</h2>
                     <div class="product-name test mb-9 w-[300px]">
                         <label for="name-input" class="font-normal text-base text-[#212529]">Product Name</label>
@@ -56,6 +56,7 @@
                         <select
                             id="product"
                             class="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
                         >
                             <option selected>Choose...</option>
                             <option value="bag">Bag</option>
@@ -66,7 +67,7 @@
                     <div class="product-image test mb-9 w-[202px]">
                         <label for="image">Image of Product</label>
                         <input
-                            class="block w-full mb-5 text-xs text-[#0D6EFD] border border-[#0D6EFD] rounded-lg cursor-pointer bg-gray-50 file:text-[#0D6EFD] focus:outline-none file:border-[#0D6EFD] file:placeholder-white file:py-2 file:px-3 file:bg-[#0D6EFD] file:text-sm"
+                            class="block w-full mb-5 text-xs text-[#0D6EFD] border border-[#0D6EFD] rounded-lg cursor-pointer bg-gray-50 file:text-white focus:outline-none file:border-[#0D6EFD] file:placeholder-white file:py-2 file:px-3 file:bg-[#0D6EFD] file:text-sm"
                             id="small_size"
                             type="file"
                         />
@@ -74,13 +75,13 @@
                     <div class="product-freshness test mb-4">
                         <label for="product-freshness">Product Freshness</label>
                         <br />
-                        <input type="radio" id="new" value="Brand New" required />
+                        <input type="radio" id="new" value="Brand New" />
                         <label for="new">Brand New</label>
                         <br />
-                        <input type="radio" id="hank" value="Second Hank" required />
+                        <input type="radio" id="hank" value="Second Hank" />
                         <label for="hank">Second Hand</label>
                         <br />
-                        <input type="radio" id="refur" value="Refurbished" required />
+                        <input type="radio" id="refur" value="Refurbished" />
                         <label for="refur">Refurbished</label>
                         <br />
                     </div>
@@ -91,6 +92,7 @@
                             id="message"
                             rows="4"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
                         ></textarea>
                     </div>
                     <div class="product-price test mb-9">
@@ -100,14 +102,14 @@
                             type="number"
                             id="number-input"
                             aria-describedby="helper-text-explanation"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="$ 1"
                             required
                         />
                     </div>
                     <button
                         type="submit"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full group-invalid:pointer-events-none group-invalid:opacity-30"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
                     >
                         Submit
                     </button>
