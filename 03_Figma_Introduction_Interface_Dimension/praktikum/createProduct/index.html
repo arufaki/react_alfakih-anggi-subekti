@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Create</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="public/main.css" />
+    </head>
+    <body>
+        <header class="shadow-lg">
+            <nav class="flex justify-between items-center py-[15px] container-custom max-content">
+                <h1 class="font-roboto font-medium text-[24px]">Simple Header</h1>
+                <ul class="hidden sm:flex items-center">
+                    <li class="mx-[24px] font-roboto font-medium text-[16px] text-[#ffffff] bg-[#0d6efd] px-[16px] py-[12px] rounded-[4px]">Home</li>
+                    <li class="px-[24px] font-roboto font-medium text-[16px] text-[#0d6efd]">Features</li>
+                    <li class="px-[24px] font-roboto font-medium text-[16px] text-[#0d6efd]">Pricing</li>
+                    <li class="px-[24px] font-roboto font-medium text-[16px] text-[#0d6efd]">FAQs</li>
+                    <li class="px-[24px] font-roboto font-medium text-[16px] text-[#0d6efd]">About</li>
+                </ul>
+                <div class="flex flex-col sm:hidden">
+                    <span class="w-8 h-1 bg-black my-[2px] rounded-xl"></span>
+                    <span class="w-8 h-1 bg-black my-[2px] rounded-xl"></span>
+                    <span class="w-8 h-1 bg-black my-[2px] rounded-xl"></span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="max-content">
+                <div class="flex justify-center flex-col text-center py-12">
+                    <img class="w-20 mx-auto" src="assets/bs-logo.png" alt="bs-logo" />
+                    <h1 class="font-roboto font-medium text-3xl mb-2 mt-6">Create Product</h1>
+                    <p class="font-roboto text-xl font-light w-[62%] mx-auto text-[#212529]">
+                        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+                    </p>
+                </div>
+            </section>
+            <section class="flex flex-wrap items-center justify-center flex-col">
+                <form class="group w-[600px]">
+                    <h2 class="font-roboto font-medium text-2xl mb-4 text-[#212529]">Detail Product</h2>
+                    <div class="product-name test mb-9 w-[300px]">
+                        <label for="name-input" class="font-normal text-base text-[#212529]">Product Name</label>
+                        <br />
+                        <input
+                            type="text"
+                            id="name-input"
+                            class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-3 peer invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"
+                            pattern="^[a-zA-Z0-9._\s]{10,50}$"
+                            required
+                        />
+                        <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block"> Must be min 10 - 50 characters </span>
+                    </div>
+                    <div class="product-category test mb-9 w-[224px]">
+                        <label for="category-input">Product Category :</label>
+                        <br />
+                        <select
+                            id="product"
+                            class="bg-gray-50 border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
+                        >
+                            <option selected>Choose...</option>
+                            <option value="bag">Bag</option>
+                            <option value="clothes">Clothes</option>
+                            <option value="jeans">Jeans</option>
+                        </select>
+                    </div>
+                    <div class="product-image test mb-9 w-[202px]">
+                        <label for="image">Image of Product</label>
+                        <input
+                            class="block w-full mb-5 text-xs text-[#0D6EFD] border border-[#0D6EFD] rounded-lg cursor-pointer bg-gray-50 file:text-white focus:outline-none file:border-[#0D6EFD] file:placeholder-white file:py-2 file:px-3 file:bg-[#0D6EFD] file:text-sm"
+                            id="small_size"
+                            type="file"
+                        />
+                    </div>
+                    <div class="product-freshness test mb-4">
+                        <label for="product-freshness">Product Freshness</label>
+                        <br />
+                        <input type="radio" id="new" value="Brand New" />
+                        <label for="new">Brand New</label>
+                        <br />
+                        <input type="radio" id="hank" value="Second Hank" />
+                        <label for="hank">Second Hand</label>
+                        <br />
+                        <input type="radio" id="refur" value="Refurbished" />
+                        <label for="refur">Refurbished</label>
+                        <br />
+                    </div>
+                    <div class="product-description test mb-8">
+                        <label for="product-description">Additional Description</label>
+                        <br />
+                        <textarea
+                            id="message"
+                            rows="4"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="product-price test mb-9">
+                        <label for="price-prod">Product price :</label>
+                        <br />
+                        <input
+                            type="number"
+                            id="number-input"
+                            aria-describedby="helper-text-explanation"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-600 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="$ 1"
+                            required
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
+                    >
+                        Submit
+                    </button>
+                </form>
+            </section>
+            <section class="container-custom mb-64">
+                <h1 class="font-medium text-3xl text-center my-2">List Product</h1>
+                <div class="relative overflow-x-auto max-content">
+                    <table class="w-full text-sm text-left text-gray-700">
+                        <thead class="text-xs text-gray-700 bg-white border-b-2 border-gray-300 border-t-2">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">No</th>
+                                <th scope="col" class="px-6 py-3">Product Name</th>
+                                <th scope="col" class="px-6 py-3">Product Category</th>
+                                <th scope="col" class="px-6 py-3">Image of Product</th>
+                                <th scope="col" class="px-6 py-3">Product Freshness</th>
+                                <th scope="col" class="px-6 py-3">Additional Description</th>
+                                <th scope="col" class="px-6 py-3">Product Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4">1,001</td>
+                                <td class="px-6 py-4">Lorem</td>
+                                <td class="px-6 py-4">ipsum</td>
+                                <td class="px-6 py-4">dolor</td>
+                                <td class="px-6 py-4">Brand new</td>
+                                <td class="px-6 py-4">adipiscing</td>
+                                <td class="px-6 py-4">1</td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b hover:bg-gray-100">
+                                <td class="px-6 py-4">1,002</td>
+                                <td class="px-6 py-4">Lorem</td>
+                                <td class="px-6 py-4">ipsum</td>
+                                <td class="px-6 py-4">dolor</td>
+                                <td class="px-6 py-4">Second Hand</td>
+                                <td class="px-6 py-4">adipiscing</td>
+                                <td class="px-6 py-4">10</td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td class="px-6 py-4">1,003</td>
+                                <td class="px-6 py-4">Lorem</td>
+                                <td class="px-6 py-4">ipsum</td>
+                                <td class="px-6 py-4">dolor</td>
+                                <td class="px-6 py-4">Brand New</td>
+                                <td class="px-6 py-4">adipiscing</td>
+                                <td class="px-6 py-4">20</td>
+                            </tr>
+                            <tr class="bg-gray-50 border-b hover:bg-gray-100">
+                                <td class="px-6 py-4">1,004</td>
+                                <td class="px-6 py-4">Lorem</td>
+                                <td class="px-6 py-4">ipsum</td>
+                                <td class="px-6 py-4">dolor</td>
+                                <td class="px-6 py-4">Refushed</td>
+                                <td class="px-6 py-4">adipiscing</td>
+                                <td class="px-6 py-4">9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Search and delete buttons -->
+                    <div class="flex items-start mt-4 flex-col">
+                        <input class="border border-gray-300 p-2 rounded focus:outline-none focus:ring focus:ring-blue-300" placeholder="Search by Product Name" type="text" />
+                        <div class="flex items-start">
+                            <button class="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 border border-solid border-[#0D6EFD]">Deletion</button>
+                            <button class="px-4 py-2 bg-white hover:bg-red-600 text-[#0D6EFD] rounded-r-lg border border-solid border-[#0D6EFD]">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
