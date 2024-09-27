@@ -22,7 +22,7 @@ async function fetchData() {
         const fetch = await apiExample();
         console.log(fetch);
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
