@@ -3,12 +3,12 @@
 // 1. Variable dan Tipe Data
 
 function swapValues(a, b) {
-    // console.log(`sebelum di swap a = ${a} dan b = ${b}`);
+    console.log(`sebelum di swap a = ${a} dan b = ${b}`);
     let temporory = a;
     a = b;
     b = temporory;
 
-    // console.log(`sesudah swap a = ${a} dan b = ${b}`);
+    console.log(`sesudah swap a = ${a} dan b = ${b}`);
 }
 
 swapValues(5, 10);
@@ -18,11 +18,9 @@ swapValues(5, 10);
 
 // 2. Destructuring
 
-const reverseFirstTwo = ([a, b]) => {
-    return [b, a];
-};
+const reverseFirstTwo = ([a, b]) => [b, a];
 
-// console.log(reverseFirstTwo([1, 2]));
+console.log(reverseFirstTwo([1, 2]));
 
 // 3. Alur Kontrol atau (Control Flow)
 
@@ -34,7 +32,7 @@ function findLargest(number) {
             largestArr = number[i];
         }
     }
-    // console.log(`nilai terbesar dari argumen adalah ${largestArr}`);
+    console.log(`nilai terbesar dari argumen adalah ${largestArr}`);
 }
 
 findLargest([3, 2, 22, 20, 15, 6]);
@@ -56,7 +54,7 @@ const calculator = {
     },
 };
 
-// console.log(calculator.divide(8, 2));
+console.log(calculator.divide(8, 2));
 
 // 5. Fungsi
 
