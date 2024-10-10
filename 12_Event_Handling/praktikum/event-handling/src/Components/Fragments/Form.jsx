@@ -6,7 +6,11 @@ import Button from "../Elements/Button";
 import { useState } from "react";
 
 export default function Form() {
-    const [toggleLimit, setToggleLimit] = useState(false);
+    const [error, setError] = useState({
+        name: "",
+        description: "",
+        price: "",
+    });
 
     const dataRadio = [
         {
@@ -29,37 +33,24 @@ export default function Form() {
         },
     ];
 
-    let datas = {
-        name: "",
-        category: "",
-        condition: "",
-        description: "",
-        price: "",
-    };
-
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        if (name == "name") {
-            if (value.length > 25) {
-                alert("Last Name must not exceed 25 characters");
-                setToggleLimit(true);
-            } else {
-                setToggleLimit(false);
-            }
-        } else if (name == "description") {
-            if (value.length < 10) {
-                setToggleLimit(true);
-            } else {
-                setToggleLimit(false);
-            }
-        } else if (name == "price") {
-            if (value <= 0) {
-                setToggleLimit(true);
-            } else {
-                setToggleLimit(false);
-            }
+        let errorMsg = "";
+
+        if (name === "name" && value.length > 25) {
+            alert("Last Name must not exceed 25 characters");
+            errorMsg = "Maximum 25 characters !";
+        } else if (name === "description" && value.length < 10) {
+            errorMsg = "Description must be at least 10 characters";
+        } else if (name === "price" && value <= 0) {
+            errorMsg = "Price must be greater than 0";
         }
+
+        setError((prevErrors) => ({
+            ...prevErrors,
+            [name]: errorMsg,
+        }));
     };
 
     const handleSubmit = (e) => {
@@ -74,9 +65,6 @@ export default function Form() {
         if (!description) {
             alert("Please enter a valid description.");
         }
-
-        const { name, value } = e.target;
-        datas[name] = value;
     };
 
     return (
@@ -89,12 +77,12 @@ export default function Form() {
                         type="text"
                         name="name"
                         className={`border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 dark:placeholder-gray-400   mt-3 focus:outline-none ${
-                            toggleLimit ? "border-red-500 active:border-red-500 active:ring-red-500" : "focus:border-blue-500"
+                            error.name ? "border-red-500 active:border-red-500 active:ring-red-500" : "focus:border-blue-500"
                         }`}
                         onChange={handleChange}
                         required
                     />
-                    {toggleLimit && <p className="mt-2 font-roboto text-sm text-red-500"> Maximum 25 characters ! </p>}
+                    {error.name && <p className="mt-2 font-roboto text-sm text-red-500">{error.name}</p>}
                 </div>
                 <div className="product-category test mb-9 w-[224px]">
                     <Label labelName="Product Category" htmlFor="category" />
@@ -126,12 +114,12 @@ export default function Form() {
                         name="description"
                         rows="4"
                         className={`block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300dark:placeholder-gray-400 dark:text-black focus:outline-none ${
-                            toggleLimit ? "border-red-500 active:border-red-500 active:ring-red-500" : "focus:border-blue-500"
+                            error.description ? "border-red-500 active:border-red-500 active:ring-red-500" : "focus:border-blue-500"
                         }`}
                         onChange={handleChange}
                         required
                     />
-                    {toggleLimit && <p className="mt-2 font-roboto text-sm text-red-500"> Minimum 10 characters ! </p>}
+                    {error.description && <p className="mt-2 font-roboto text-sm text-red-500">{error.description}</p>}
                 </div>
                 <div className="product-price test mb-9">
                     <Label htmlFor="price" labelName="Product Price" />
@@ -142,13 +130,13 @@ export default function Form() {
                         name="price"
                         aria-describedby="helper-text-explanation"
                         className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:placeholder-gray-600 dark:text-black focus:outline-none ${
-                            toggleLimit ? "border-red-500 active:border-red-500 active:ring-red-500" : "focus:border-blue-500"
+                            error.price ? "border-red-500 active:border-red-500 active:ring-red-500" : "focus:border-blue-500"
                         }`}
                         placeholder="$ 1"
                         onChange={handleChange}
                         required
                     />
-                    {toggleLimit && <p className="mt-2 font-roboto text-sm text-red-500">Price must be more than 0 !</p>}
+                    {error.price && <p className="mt-2 font-roboto text-sm text-red-500">{error.price}</p>}
                 </div>
                 <Button type="submit" label="Submit" variant="submit" />
             </form>
