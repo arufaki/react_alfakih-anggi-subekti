@@ -1,0 +1,42 @@
+export const dataProducts = [
+    {
+        name: "Sling Bag",
+        category: "bag",
+        image: "default.png",
+        condition: "brand new",
+        description: "Nice product",
+        price: 4,
+    },
+    {
+        name: "Sneakers",
+        category: "footwear",
+        image: "sneakers.png",
+        condition: "brand new",
+        description: "Comfortable sneakers for daily use",
+        price: 45,
+    },
+    {
+        name: "Wristwatch",
+        category: "accessory",
+        image: "watch.png",
+        condition: "used",
+        description: "Elegant wristwatch for formal occasions",
+        price: 30,
+    },
+    {
+        name: "Backpack",
+        category: "bag",
+        image: "backpack.png",
+        condition: "brand new",
+        description: "Spacious and stylish backpack",
+        price: 25,
+    },
+    {
+        name: "Sunglasses",
+        category: "accessory",
+        image: "sunglasses.png",
+        condition: "brand new",
+        description: "Fashionable sunglasses for sunny days",
+        price: 15,
+    },
+];
