@@ -6,8 +6,8 @@ Proyek ini bertujuan untuk membuat landing page dengan menggunakan React.js dan 
 
 ## Screenshot Output Landing Page
 
-![Output](05_full_output_landing_page.png)
+![Output](/98_Code_Competence_KM_React_1/screenshots//05_full_output_landing_page.png)
 
 ## Screenshot Output About Us
 
-![Output](06_full_output_aboutPage.png)
+![Output](/98_Code_Competence_KM_React_1/screenshots/06_full_output_aboutPage.png)
