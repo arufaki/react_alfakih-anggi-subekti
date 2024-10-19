@@ -6,8 +6,11 @@ import Button from "../Elements/Button";
 import { dataRadio } from "../../utils/radio";
 import useValidation from "../../customHook/useValidation";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export default function Form({ onSubmit, initialData }) {
+    const errorSubmit = useSelector((state) => state.products.error);
+
     const initialState = {
         id: null,
         name: "",
@@ -141,6 +144,7 @@ export default function Form({ onSubmit, initialData }) {
                     {error.price && <p className="mt-2 font-roboto text-sm text-red-500">{error.price}</p>}
                 </div>
                 <Button type="submit" label="Submit" variant="submit" />
+                {errorSubmit && <div style={{ color: "red" }}>{errorSubmit}</div>}
             </form>
         </section>
     );
