@@ -5,7 +5,8 @@ import Form from "../Fragments/Form";
 import Table from "../Fragments/Table";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addProduct, updateProduct } from "../../redux/productSlice";
+import { updateProduct } from "../../redux/productSlice";
+import { addProduct } from "../../redux/actions";
 
 export default function CreateProduct() {
     const [formData, setFormData] = useState(null);

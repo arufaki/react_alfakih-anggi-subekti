@@ -12,14 +12,20 @@ const initialState = {
             price: 44,
         },
     ],
+    error: null,
 };
 
 const productSlice = createSlice({
     name: "product",
     initialState,
     reducers: {
-        addProduct: (state, action) => {
+        addProductSuccess: (state, action) => {
             state.product = [...state.product, action.payload];
+            state.error = null;
+        },
+
+        addProductError: (state, action) => {
+            state.error = action.payload;
         },
         deleteProduct: (state, action) => {
             state.product = state.product.filter((item) => item.id !== action.payload);
@@ -36,6 +42,6 @@ const productSlice = createSlice({
     },
 });
 
-export const { addProduct, deleteProduct, updateProduct } = productSlice.actions;
+export const { addProductSuccess, addProductError, deleteProduct, updateProduct } = productSlice.actions;
 
 export default productSlice.reducer;
