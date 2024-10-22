@@ -27,3 +27,6 @@ Vercel adalah platform yang dirancang untuk pengembang modern, memungkinkan kita
 -   **Performa Cepat**: Vercel dioptimalkan untuk aplikasi berbasis serverless, menjadikannya pilihan favorit bagi banyak pengembang untuk memastikan aplikasi mereka selalu tersedia dan responsif.
 
 Dengan semua fitur tersebut, Vercel merupakan pilihan yang sangat baik untuk deployment aplikasi web modern.
+
+
+Vercel Deploy : reactglobalstate.vercel.app
