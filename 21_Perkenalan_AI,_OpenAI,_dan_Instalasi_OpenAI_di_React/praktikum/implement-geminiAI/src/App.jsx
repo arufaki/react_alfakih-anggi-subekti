@@ -12,21 +12,27 @@ const App = () => {
     const API_KEY = "AIzaSyDl9Vuu3lvEOyn7zNOOo6GobV_z23tsXuk";
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
-
-    useEffect(() => {
-        bottom.current?.scrollIntoView({ behavior: "smooth" });
-        console.log(session);
-    }, [response, session]);
+    const generationConfig = {
+        temperature: 1,
+        topP: 0.95,
+        topK: 64,
+        maxOutputTokens: 1000,
+        responseMimeType: "text/plain",
+    };
 
     const generate = async () => {
         try {
-            const hit = await model.generateContent(input);
+            const hit = await model.generateContent(input, generationConfig);
             const resAI = hit.response.text();
             setResponse((prevRes) => prevRes.map((item, index) => (index === prevRes.length - 1 ? { ...item, response: resAI } : item)));
         } catch (error) {
             console.error(error);
         }
     };
+
+    useEffect(() => {
+        bottom.current?.scrollIntoView({ behavior: "smooth" });
+    }, [response]);
 
     const handleNewChat = () => {
         const newSession = {
