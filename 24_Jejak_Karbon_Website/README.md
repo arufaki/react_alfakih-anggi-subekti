@@ -17,3 +17,5 @@
 ## 3. Langkah Mengurangi Jejak Karbon
 
 Optimasi dari kontribusi terbesar. Kompres file, pilih hosting eco-friendly, kurangi konten berat, dan gunakan font ringan. Langkah kecil membuat website lebih hijau.
+
+Link tugas jejak karbon gdocs = https://docs.google.com/document/d/1w5weIQ8ugZCSm6SHUNSEbJ5N3XEenUWYvnJsEykaRpI/edit?usp=sharing
