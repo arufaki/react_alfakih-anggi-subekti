@@ -19,3 +19,5 @@
 ## 3. Pengembangan Berkelanjutan
 
 Pastikan setiap update tetap efisien dan hemat energi. Monitor performa rutin agar website tetap optimal.
+
+Link jawaban Soal Prioritas 1 : https://docs.google.com/document/d/1wsYWJO6HGt_OIeXjWv2EXWtrM6komBiNoLSK9NS79A0/edit?usp=sharing
