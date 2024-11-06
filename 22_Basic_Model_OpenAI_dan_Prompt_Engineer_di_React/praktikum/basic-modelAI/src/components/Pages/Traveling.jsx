@@ -32,6 +32,12 @@ function Traveling() {
             const hit = await genAI.generateContent(TRAVALING_PROMPT(country, city, visitDate, activities), generationConfig, safetySettings);
             const resAI = hit.response.text();
             setSchedule(formatSchedule(resAI));
+            setFormData({
+                country: "",
+                city: "",
+                visitDate: "",
+                activities: "",
+            });
         } catch (error) {
             console.error(error);
         } finally {
