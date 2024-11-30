@@ -6,7 +6,7 @@ EcoShelf adalah platform berbasis web yang berfokus pada pengumpulan dan rekomen
 
 ## Screenshot Output Landing Page
 
-![Output](/99_Code_Competence_KM_React_1/screenshots/pictures/landing.png)
+![Output](/99_Code_Competence_KM_React_2/screenshots/pictures/landing.png)
 
 ## Screenshot Output Books Page
 
